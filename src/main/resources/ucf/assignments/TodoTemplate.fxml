@@ -7,25 +7,29 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="472.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.TodoTemplateController">
-   <children>
-      <TableView fx:id="TodoListTable" layoutY="90.0" prefHeight="290.0" prefWidth="602.0">
-        <columns>
-          <TableColumn fx:id="TaskColumn" prefWidth="129.7488831281662" text="Task" />
-          <TableColumn fx:id="DescriptionColumn" prefWidth="295.2510986328125" text="Description" />
-            <TableColumn fx:id="DueDateColumn" prefWidth="91.5" text="Due Date" />
-            <TableColumn fx:id="CheckColumn" prefWidth="98.0" text="Complete" />
-        </columns>
-      </TableView>
-      <Button layoutX="14.0" layoutY="56.0" mnemonicParsing="false" onAction="#AddTaskButtonClicked" text="Add Task" />
-      <Button layoutX="93.0" layoutY="56.0" mnemonicParsing="false" onAction="#DeleteTaskButtonClicked" text="Delete Task" />
-      <TextField fx:id="AddTaskTextField" layoutX="13.0" layoutY="393.0" promptText="Add Task" />
-      <TextField fx:id="AddDescriptionTextField" layoutX="185.0" layoutY="395.0" promptText="Add  Description" />
-      <DatePicker fx:id="DueDatePicker" layoutX="355.0" layoutY="395.0" promptText="Choose a Due DateText" />
-      <TextField fx:id="TodoListTitle" alignment="CENTER" layoutX="179.0" layoutY="24.0" prefHeight="26.0" prefWidth="269.0" />
-      <Button layoutX="506.0" layoutY="43.0" mnemonicParsing="false" onAction="#SaveListButtonClicked" prefHeight="26.0" prefWidth="82.0" text="Save List" />
-      <Button layoutX="13.0" layoutY="433.0" mnemonicParsing="false" onAction="#CompleteTasksButtonClicked" text="Show completed" />
-      <Button layoutX="142.0" layoutY="433.0" mnemonicParsing="false" onAction="#IncompleteTasksButtonClicked" text="Show incomplete" />
-      <Button layoutX="537.0" layoutY="11.0" mnemonicParsing="false" onAction="#ReturnHomeButtonClicked" text="Home" />
-   </children>
+<AnchorPane prefHeight="472.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="ucf.assignments.TodoTemplateController">
+    <TableView fx:id="TodoListTable" layoutY="90.0" prefHeight="290.0" prefWidth="602.0">
+      <columns>
+          <TableColumn fx:id="TaskColumn" prefWidth="129.7488831281662" text="Task"/>
+          <TableColumn fx:id="DescriptionColumn" prefWidth="295.2510986328125" text="Description"/>
+          <TableColumn fx:id="DueDateColumn" prefWidth="91.5" text="Due Date"/>
+          <TableColumn fx:id="CheckColumn" prefWidth="98.0" text="Complete"/>
+      </columns>
+    </TableView>
+    <Button layoutX="14.0" layoutY="56.0" mnemonicParsing="false" onAction="#AddTaskButtonClicked" text="Add Task"/>
+    <Button layoutX="93.0" layoutY="56.0" mnemonicParsing="false" onAction="#DeleteTaskButtonClicked"
+            text="Delete Task"/>
+    <TextField fx:id="AddTaskTextField" layoutX="13.0" layoutY="393.0" promptText="Add Task"/>
+    <TextField fx:id="AddDescriptionTextField" layoutX="185.0" layoutY="395.0" promptText="Add  Description"/>
+    <DatePicker fx:id="DueDatePicker" layoutX="355.0" layoutY="395.0" promptText="Choose a Due DateText"/>
+    <TextField fx:id="TodoListTitle" alignment="CENTER" layoutX="179.0" layoutY="24.0" prefHeight="26.0"
+               prefWidth="269.0"/>
+    <Button layoutX="506.0" layoutY="43.0" mnemonicParsing="false" onAction="#SaveListButtonClicked" prefHeight="26.0"
+            prefWidth="82.0" text="Save List"/>
+    <Button layoutX="13.0" layoutY="433.0" mnemonicParsing="false" onAction="#CompleteTasksButtonClicked"
+            text="Show completed"/>
+    <Button layoutX="142.0" layoutY="433.0" mnemonicParsing="false" onAction="#IncompleteTasksButtonClicked"
+            text="Show incomplete"/>
+    <Button layoutX="537.0" layoutY="11.0" mnemonicParsing="false" onAction="#ReturnHomeButtonClicked" text="Home"/>
 </AnchorPane>

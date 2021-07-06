@@ -28,6 +28,7 @@ public class EditListController {
         }
     }
 
+
     public void EnterButtonClicked(ActionEvent actionEvent) {
         //recieves user input
         //Takes variable and does comparison of all list names saved in application and database

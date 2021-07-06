@@ -24,13 +24,13 @@ import java.util.ResourceBundle;
 
 public class TodoTemplateController implements Initializable {
     @FXML
-    public TableView<TaskModel>TodoListTable;
+    public TableView<TaskModel> TodoListTable;
     @FXML
     public TableColumn<TaskModel, String> TaskColumn;
     @FXML
-    public  TableColumn<TaskModel, String> DescriptionColumn;
+    public TableColumn<TaskModel, String> DescriptionColumn;
     @FXML
-    public  TableColumn<TaskModel, LocalDate> DueDateColumn;
+    public TableColumn<TaskModel, LocalDate> DueDateColumn;
     @FXML
     public TableColumn<TaskModel, CheckBox> CheckColumn;
     @FXML
@@ -40,76 +40,112 @@ public class TodoTemplateController implements Initializable {
     @FXML
     public TextField AddTaskTextField;
     @FXML
+    public TextField TodoListTitle;
 
 
 
-    public void initialize(URL location, ResourceBundle resources){
+
+    public void initialize(URL location, ResourceBundle resources) {
         //intialize cell values for each column to correspond with TaskModel class
-
 
         //These are not correct code, just an idea of how to do so!
 
-       // TaskColumn.setCellValueFactory(new PropertyValueFactory<TaskModel, String>("taskName"));
+        // TaskColumn.setCellValueFactory(new PropertyValueFactory<TaskModel, String>("taskName"));
 
         //DescriptionColumn.setCellValueFactory(new PropertyValueFactory<TaskModel, String>("taskdescription")) ;
 
         //DueDateColumn.setCellValueFactory(new PropertyValueFactory<TaskModel, LocalDate>("taskDueDate"));
 
-       // CheckColumn.setCellValueFactory(new PropertyValueFactory<TaskModel, CheckBox>("CheckColumn"));
+        // CheckColumn.setCellValueFactory(new PropertyValueFactory<TaskModel, CheckBox>("CheckColumn"));
+
+        //Update table to allow for fields to be editable after methods are created below!
+        //tableview.seteditable(true)
+        //each column needs a .setCellFactory line to allow each individual line to click and change
 
 
+        //set selection in tableview to multiple
+        //tableview.selection.MULTIPLE
 
     }
 
-//Add Task Button event
+
+//method to allow user to double click on cell and update in TableView
+
+    public void changeTask() {
+        //create task selector
+        //Task taskSelected = TableView.getselectionModel().getItem
+        //taskselected.setTaskName(editedCell.getNewValue().toString());
+        //in .fxml i need to associate the method with #On Edit Commit?
+
+    }
+
+    //Method  to allow user to double click on cell and update description in TableView
+    public void changeDesrip() {
+
+        //same steps just for the description cell Due Date
+    }
+
+    //Method to allow user to double click on cell and update
+    public void changeDate() {
+        //same steps take into account it is not a string
+        //DatePicker conversion?
+    }
+
+
+    //Add Task Button event
     public void AddTaskButtonClicked(ActionEvent actionEvent) {
 
 //allow user to use text fields to add tasks with descriptions, as well as select due date for each individual task added.
         //CheckBox should appear for each task added since it would be impossible to pre anticipate how check boxes are needed.
-       // TaskModel task = new TaskModel(AddTaskTextField.getText(),AddDescriptionTextField.getText(),DueDatePicker.getValue(), CheckColumn.);
+        // TaskModel task = new TaskModel(AddTaskTextField.getText(),AddDescriptionTextField.getText(),DueDatePicker.getValue(), CheckColumn.);
         //Take information from text field and add it to the TableView format
-      //  TodoListTable.getItems().add(task);
+        //  TodoListTable.getItems().add(task);
 
     }
-//Delete TaskButton Event
+
+    //Delete TaskButton Event
+// method to remove selected rows
     public void DeleteTaskButtonClicked(ActionEvent actionEvent) {
 
         //Allow user to Delete Tasks, Description and Due date in Table View
-        //Select Task using built in functions from TableView
-        //Prompt a pop-up screen for User to confirm they would like to delete Task being selected from row.
-        //If yes, clear row from TableView
-        //If no, return back to TableView
+
+
+        //create ObservableList to select all rows
+
+        //remove selected rows from observablelist
     }
+
 //Save List Button Event
     public void SaveListButtonClicked(ActionEvent actionEvent) {
-        //Take information stored in TableView Currently showing on scene
-        //convert information to variables
-        //ask user if they want to save to application storage or external storage
-        //if user chooses external storage
-        //create a file write function
-        //take information stored into variables and print to textfile
-        //make sure user has access to external storage incase they want to load .txtfile bc it  is a constraint
-        //else save list information including title, tasks, description etc data to application
 
-    }
 
-    public void CompleteTasksButtonClicked(ActionEvent actionEvent) {
-        //take all tasks marked with checkboxes and display
-        //all other tasks will not be visiable to user
-        //function like if(Checkboxes.equals(marked){
-        //display results
-        //} else
-        //hide tasks
-    }
+        /*
+        Take information stored in TableView Currently showing on scene
 
-    public void IncompleteTasksButtonClicked(ActionEvent actionEvent) {
-        //take all tasks unmarked in checkboxes and display
-        //all marked tasks will  not be visiable to user
-        //if(checkboxes.equals(unmarked)
-        //make visible to user
-        //else
-        //hide tasks
-    }
+        store into ArrayList
+
+         */
+
+        }
+
+        public void CompleteTasksButtonClicked (ActionEvent actionEvent){
+            //take all tasks marked with checkboxes and display
+            //all other tasks will not be visible to user
+            //function like if(Checkboxes.equals(marked){
+            //display results
+            //} else
+            //hide tasks
+        }
+
+        public void IncompleteTasksButtonClicked (ActionEvent actionEvent){
+            //take all tasks unmarked in checkboxes and display
+            //all marked tasks will  not be visiable to user
+            //if(checkboxes.equals(unmarked)
+            //make visible to user
+            //else
+            //hide tasks
+        }
+
 
     public void ReturnHomeButtonClicked(ActionEvent actionEvent) {
         try {
@@ -123,5 +159,5 @@ public class TodoTemplateController implements Initializable {
             e.printStackTrace();
         }
     }
-    }
+}
 
