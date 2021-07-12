@@ -94,6 +94,7 @@ public void showInformation(String title){
 
     //Add Task Button event
     public void AddTaskButtonClicked(ActionEvent actionEvent) {
+        //takes in textfield inputs and adds to tableview
         Tasks task = new Tasks(AddTaskTextField.getText(), AddDescriptionTextField.getText(), DueDatePicker.getValue());
         TodoListTable.getItems().add(task);
 
@@ -106,7 +107,7 @@ public void showInformation(String title){
     public void DeleteTaskButtonClicked(ActionEvent actionEvent) {
 
         //Allow user to Delete Tasks, Description and Due date in Table View
-        // create ObservableList to select all rows
+        // create ObservableList to select rows
         ObservableList<Tasks> selectedRows, allTasks;
         allTasks = TodoListTable.getItems();
 
@@ -122,14 +123,16 @@ public void showInformation(String title){
 
     //Save List Button Event
     public void SaveListButtonClicked(ActionEvent actionEvent) {
+        //converts date format from textfile to tableview accepted format
         String date = DueDatePicker.getValue().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
         try {
-
+            //lets user take tableview items and store to external textfile
+            //path needed to be changed for user's different directory as stated in README.md
             FileWriter myWriter = new FileWriter("/Users/korinneramcharitar/Desktop/Output.txt");
 
 
             for (Tasks task : TodoListTable.getItems()) {
-
+        
                     String formatted = String.format("%s, %s, %s, %s", TodoListTitle.getText(), task.getTaskName(), task.getTaskDescription(), date);
                     myWriter.write(formatted);
 
@@ -142,7 +145,7 @@ public void showInformation(String title){
             e.printStackTrace();
         }
     }
-
+//not completed
     public void CompleteTasksButtonClicked(ActionEvent actionEvent) {
 
         ObservableList<Tasks> CompleteTasks, dataListRemove = FXCollections.observableArrayList();
@@ -174,7 +177,7 @@ public void showInformation(String title){
             //hide tasks*/
     }
 
-
+//not completed
     public void IncompleteTasksButtonClicked(ActionEvent actionEvent) {
         //take all tasks unmarked in checkboxes and display
         ObservableList<Tasks> IncompleteTasks, dataListRemove = FXCollections.observableArrayList();
@@ -198,7 +201,7 @@ public void showInformation(String title){
     }
     //all marked tasks will  not be visible to user
 
-
+//returns user to menu, does not save anything
     public void ReturnHomeButtonClicked(ActionEvent actionEvent) {
         try {
             Parent HomeListParent = FXMLLoader.load(getClass().getResource("Welcome.fxml"));
@@ -211,13 +214,14 @@ public void showInformation(String title){
             e.printStackTrace();
         }
     }
-
+//takes external file and uploads to tableview
     public void UploadListButtonClicked(ActionEvent actionEvent) {
-
+//path needed to be changed for user's different directory as stated in README.md
         String path = "/Users/korinneramcharitar/Desktop/SampleTodoList";
         String line = "";
         try {
             BufferedReader br = new BufferedReader(new FileReader(path));
+            //reads through "," seperated lines in file and puts into tableview rows
                 while((line = br.readLine()) != null){
                     String[] values = line.split(",");
                 System.out.println(line);
