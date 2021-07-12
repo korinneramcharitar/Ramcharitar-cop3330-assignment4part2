@@ -1,19 +1,17 @@
 @startuml
 Class ToDoTemplateController{
-
 EnterTaskTexField
 EnterDescriptionTextField
-SaveListButtonClicked
-UploadListButtonClicked
-HomeButtonClicked
+SaveListButtonClicked()
+UploadListButtonClicked()
+HomeButtonClicked()
 NameListTextField
 CheckBox Checkoff
-
-AddTaskTextField
+AddTaskTextField()
 AddDescriptionTextField
 AddDueDateTextField
-AddTaskButtonClicked
-DeleteButtonClicked
+AddTaskButtonClicked()
+DeleteButtonClicked()
 }
 
 Class TaskModel{
@@ -24,18 +22,13 @@ String Description
 }
 
 Class WelcomeController{
-
-EditButtonClicked
-CreateListButtonClicked
-UploadListButtonClicked
-DeleteListButtonClicked
-EditListButtonClicked
+CreateListEnterButtonClicked
 }
 
 Class CreateListController{
 String taskTitle
 HomeButtonClicked
-CreateListEnterButtonClicked
+CreateListEnterButtonClicked()
 }
 
 
