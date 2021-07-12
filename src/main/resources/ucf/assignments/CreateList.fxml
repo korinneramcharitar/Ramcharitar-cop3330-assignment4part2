@@ -12,12 +12,13 @@
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #e0e0e0;">
          <children>
             <Button layoutX="517.0" layoutY="39.0" mnemonicParsing="false" onAction="#HomeButtonClicked" prefHeight="26.0" prefWidth="67.0" text="Home" />
+            <Text fill="#3b567a" layoutX="350.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="psst! Click here to go back-&gt;" />
          </children></AnchorPane>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="71.0" prefWidth="598.0">
          <children>
             <Button layoutX="251.0" layoutY="124.0" mnemonicParsing="false" onAction="#CreateListEnterButtonClicked" prefHeight="26.0" prefWidth="96.0" text="Enter" />
             <TextField fx:id="EnterListTextField" alignment="CENTER" layoutX="219.0" layoutY="80.0" promptText="Enter Name of List" />
-            <Text layoutX="108.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What would you like to name your list?">
+            <Text fill="#376d8f" layoutX="108.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What would you like to name your list?">
                <font>
                   <Font size="24.0" />
                </font>

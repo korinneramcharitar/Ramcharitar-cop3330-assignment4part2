@@ -10,7 +10,7 @@
   <items>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="114.0" prefWidth="598.0" style="-fx-background-color: #e0e0e0;">
          <children>
-            <Text fill="#4f1212" layoutX="174.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu Selection" textAlignment="CENTER">
+            <Text fill="#496f8b" layoutX="222.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome!" textAlignment="CENTER">
                <font>
                   <Font size="36.0" />
                </font>
@@ -18,10 +18,12 @@
          </children></AnchorPane>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="174.0" prefWidth="598.0">
          <children>
-            <Button alignment="CENTER" layoutX="102.0" layoutY="122.0" mnemonicParsing="false" onAction="#UploadListButtonClicked" prefHeight="36.0" prefWidth="79.0" text="Upload List" textFill="#702b2b" />
-            <Button alignment="CENTER" layoutX="424.0" layoutY="122.0" mnemonicParsing="false" onAction="#EditListButtonClicked" prefHeight="36.0" prefWidth="75.0" text="Edit List" textFill="#772828" />
-            <Button alignment="CENTER" layoutX="14.0" layoutY="122.0" mnemonicParsing="false" onAction="#CreateListButtonClicked" prefHeight="36.0" prefWidth="76.0" text="Create List" textFill="#6a2121" />
-            <Button alignment="CENTER" layoutX="509.0" layoutY="122.0" mnemonicParsing="false" onAction="#DeleteListButtonClicked" prefHeight="36.0" prefWidth="75.0" text="Delete List" textFill="#772d2d" />
+            <Button alignment="CENTER" layoutX="216.0" layoutY="74.0" mnemonicParsing="false" onAction="#CreateListButtonClicked" prefHeight="36.0" prefWidth="167.0" text="Create List" textAlignment="CENTER" textFill="#121010" />
+            <Text fill="#567d99" layoutX="204.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Let's start planning!">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
          </children></AnchorPane>
   </items>
 </SplitPane>

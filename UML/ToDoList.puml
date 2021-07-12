@@ -32,15 +32,8 @@ HomeButtonClicked
 CreateListEnterButtonClicked
 }
 
-Class DeleteListController{
-HomeButtonClicked
-DeleteListEnterButtonClicked
-}
 
-Class EditListController{
-HomeButtonClicked
-EditListEnterButtonClicked
-}
+
 
 Class UploadListController{
 HomeButtonClicked
@@ -52,8 +45,6 @@ main()
 }
 ExecuteGUI-->UploadListController
 ExecuteGUI-->CreateListController
-ExecuteGUI-->DeleteListController
-ExecuteGUI-->EditListController
 ExecuteGUI-->ToDoTemplateController
 ExecuteGUI-->WelcomeController
 
