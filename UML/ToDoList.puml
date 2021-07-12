@@ -1,10 +1,14 @@
 @startuml
 Class ToDoTemplateController{
+
 EnterTaskTexField
 EnterDescriptionTextField
 SaveListButtonClicked
+UploadListButtonClicked
 HomeButtonClicked
 NameListTextField
+CheckBox Checkoff
+
 AddTaskTextField
 AddDescriptionTextField
 AddDueDateTextField
@@ -20,6 +24,7 @@ String Description
 }
 
 Class WelcomeController{
+
 EditButtonClicked
 CreateListButtonClicked
 UploadListButtonClicked
@@ -28,24 +33,19 @@ EditListButtonClicked
 }
 
 Class CreateListController{
+String taskTitle
 HomeButtonClicked
 CreateListEnterButtonClicked
 }
 
 
-
-
-Class UploadListController{
-HomeButtonClicked
-UploadListEnterButtonClicked
-}
 Class ExecuteGUI{
 start()
 main()
 }
-ExecuteGUI-->UploadListController
-ExecuteGUI-->CreateListController
-ExecuteGUI-->ToDoTemplateController
+
+WelcomeController-->CreateListController
+CreateListController-->ToDoTemplateController
 ExecuteGUI-->WelcomeController
 
 TaskModel--ToDoTemplateController
